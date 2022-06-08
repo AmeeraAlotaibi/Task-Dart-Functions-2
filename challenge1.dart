@@ -4,6 +4,40 @@
  * - that just prints your name on the screen
  */
 
+void main() {
+  String name = "Ameera";
+  int birthYear = 1997; 
+  
+  // print name
+  printName(name);
+  
+  //print age
+  print("You are ${printAge(birthYear)} years old.");
+
+  //max number
+  int num1 = 20;
+  int num2 = 19;
+  print(printMax(num1, num2));
+
+  //print hello
+  String lang = "fr";
+  printHello(lang, name);
+
+
+} //end of main
+
+
+//functions
+
+void printName(String name) {
+  print("Hello $name");
+}
+
+int printAge(int birthYear) {
+  int currentYear = 2022;
+  return currentYear - birthYear;
+}
+
 /**
  * Task 2:
  * Create a function named `printAge`
@@ -12,6 +46,21 @@
  * - Age = current year - birth
  */
 
+
+void printHello(String lang, String name) {
+
+  if (lang == "en") {
+    print("Hello $name");
+  } else if (lang == "es") {
+    print("Hola $name");
+  } else if (lang == "fr") {
+    print("Bonjour $name");
+  } else if (lang == "tr") {
+    print("Merhaba $name");
+  } else {
+    print("Hello $name");
+  }
+}
 /**
  * Task 3:
  * Create a function named `printHello`
@@ -29,3 +78,11 @@
  * - that takes 2 parameters as numbers
  * - should print out the bigger number
  */
+
+int printMax(int num1, int num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+}
