@@ -10,13 +10,10 @@ void main() {
   print("You are ${printAge(birthYear)} years old.");
 
   //max number
-  int num1 = 20;
-  int num2 = 33;
-  printMax(num1, num2);
+  print(printMax(50, 100));
 
   //print hello
-  String lang = "fr";
-  printHello(lang, name);
+  printHello("es", "Ameera");
 
 
 } //end of main
@@ -29,7 +26,7 @@ void main() {
  * - that just prints your name on the screen
  */
 
-String printName(String name) => "Hello $name";
+void printName(String name) => print("Hello $name");
 
 
 /**
