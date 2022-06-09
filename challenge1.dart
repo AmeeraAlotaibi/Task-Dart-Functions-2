@@ -1,8 +1,3 @@
-/**
- * Task 1:
- * Create a function named `printName`
- * - that just prints your name on the screen
- */
 
 void main() {
   String name = "Ameera";
@@ -16,8 +11,8 @@ void main() {
 
   //max number
   int num1 = 20;
-  int num2 = 19;
-  print(printMax(num1, num2));
+  int num2 = 33;
+  printMax(num1, num2);
 
   //print hello
   String lang = "fr";
@@ -27,16 +22,15 @@ void main() {
 } //end of main
 
 
-//functions
 
-void printName(String name) {
-  print("Hello $name");
-}
+/**
+ * Task 1:
+ * Create a function named `printName`
+ * - that just prints your name on the screen
+ */
 
-int printAge(int birthYear) {
-  int currentYear = 2022;
-  return currentYear - birthYear;
-}
+String printName(String name) => "Hello $name";
+
 
 /**
  * Task 2:
@@ -46,6 +40,21 @@ int printAge(int birthYear) {
  * - Age = current year - birth
  */
 
+int printAge(int birthYear) {
+  return (2022 - birthYear);
+}
+
+
+/**
+ * Task 3:
+ * Create a function named `printHello`
+ * - that takes 2 parameters, name, and language
+ * - language can be passed in different values, here are the accepted values:-
+ * -- en: it should print `Hello NAME`
+ * -- es: it should print `Hola NAME`
+ * -- fr: it should print `Bonjour NAME`
+ * -- tr: it should print `Merhaba NAME`
+ */
 
 void printHello(String lang, String name) {
 
@@ -61,16 +70,7 @@ void printHello(String lang, String name) {
     print("Hello $name");
   }
 }
-/**
- * Task 3:
- * Create a function named `printHello`
- * - that takes 2 parameters, name, and language
- * - language can be passed in different values, here are the accepted values:-
- * -- en: it should print `Hello NAME`
- * -- es: it should print `Hola NAME`
- * -- fr: it should print `Bonjour NAME`
- * -- tr: it should print `Merhaba NAME`
- */
+
 
 /**
  * Task 4:

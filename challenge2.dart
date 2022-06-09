@@ -1,14 +1,9 @@
 void main() {
-  String name = "Ameera";
-  greet(name);
-
-  int n = 4;
-  isOdd(n);
-
-
+  greet("Ameera");
+  print(isOdd(4));
+  print(oddSmallerThan(39));
+  print(squareOrDouble(6));
 }
-
-
 
 
 /**
@@ -32,15 +27,18 @@ void greet(String name) {
  * isOdd(7) -> true
  * isOdd(10) -> false
  */
-bool isOdd(int n) {
-  if (n%2 == 0) {
-    return false;
-  } else {
-    return true;
-  }
 
-  //or return n%2 != 0;
-}
+// solution number 1
+// bool isOdd(int n) {
+//   if (n%2 != 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+
+// solution number 2
+bool isOdd(int n) => n % 2 != 0 ? true : false;
+
 
 /**
  * oddsSmallerThan(n):
@@ -52,14 +50,18 @@ bool isOdd(int n) {
  * oddsSmallerThan(15) -> 7
  */
 
-int oddsSmallerThan(int n) {
-    if(isOdd(n)) {
-      return (n -1) ~/2; // ~/ is used to transform the returned number to a whole number
+// solution number 1
+// int oddsSmallerThan(int n) {
+//     if(isOdd(n)) {
+//       return (n -1) ~/2; // ~/ is used to transform the returned number to a whole number
 
-    } else {
-      return n ~/ 2;
-    }
-}
+//     } else {
+//       return n ~/ 2;
+//     }
+// }
+
+//solution number 2
+int oddSmallerThan(int n) => isOdd(n) ? (n - 1) ~/ 2 : (n ~/ 2);
 
 /**
  * squareOrDouble(n):
@@ -71,10 +73,15 @@ int oddsSmallerThan(int n) {
  * squareOrDouble(16) -> 32
  * squareOrDouble(9) -> 81
  */
-int squareOrDouble(int n) {
-    if (isOdd(n)) {
-      return n*n;
-    } else {
-      return n * 2;
-    }
-  }
+
+// soluion number 1
+// int squareOrDouble(int n) {
+//     if (isOdd(n)) {
+//       return n*n;
+//     } else {
+//       return n * 2;
+//     }
+//   }
+
+//solution number 2
+int squareOrDouble(int n) => isOdd(n) ? n * n : n * 2;
